@@ -4,18 +4,18 @@ register_operator() {
   0g-alignment-node registerOperator \
     --key "$ALIGNMENT_NODE_PRIVATE_KEY" \
     --token-id "$ALIGNMENT_NODE_TOKEN_ID" \
-    --chain-id 42161 \
+    --chain-id 16661 \
     --rpc "$ALIGNMENT_NODE_RPC" \
     --commission "$ALIGNMENT_NODE_OPERATOR_COMMISSION" \
-    --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac
+    --contract 0x7BDc2aECC3CDaF0ce5a975adeA1C8d84Fd9Be3D9
 }
 
 approve_delegates() {
   0g-alignment-node approve --mainnet \
     --key "$ALIGNMENT_NODE_PRIVATE_KEY" \
-    --chain-id 42161 \
+    --chain-id 16661 \
     --rpc "$ALIGNMENT_NODE_RPC" \
-    --contract 0xdD158B8A76566bC0c342893568e8fd3F08A9dAac \
+    --contract 0x7BDc2aECC3CDaF0ce5a975adeA1C8d84Fd9Be3D9 \
     --destNode "$ALIGNMENT_NODE_OPERATOR_ADDRESS" \
     --tokenIds "$ALIGNMENT_NODE_DELEGATE_TOKEN_IDS"
 }
